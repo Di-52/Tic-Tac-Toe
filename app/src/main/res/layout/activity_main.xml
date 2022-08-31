@@ -1,18 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main_board"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#1C1C1C">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/line2"
+            style="@style/lines_style">
+            
+            <ImageButton
+                android:id="@+id/bt_11"
+                android:layout_width="@dimen/imagebuttondimen"
+                android:layout_height="@dimen/imagebuttondimen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bt_12"
+                android:background="@color/white"/>
+            <ImageButton
+                android:id="@+id/bt_12"
+                android:layout_width="@dimen/imagebuttondimen"
+                android:layout_height="@dimen/imagebuttondimen"
+                app:layout_constraintStart_toEndOf="@+id/bt_11"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bt_13"
+                android:background="@color/white"/>
+            <ImageButton
+                android:id="@+id/bt_13"
+                android:layout_width="@dimen/imagebuttondimen"
+                android:layout_height="@dimen/imagebuttondimen"
+                app:layout_constraintStart_toEndOf="@id/bt_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/white"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1"
+            app:layout_constraintBottom_toTopOf="@id/line3"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/lines_style">
+            <ImageButton
+                android:id="@+id/bt_21"
+                android:layout_width="@dimen/imagebuttondimen"
+                android:layout_height="@dimen/imagebuttondimen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bt_22"
+                android:background="@color/white"
+                />
+            <ImageButton
+                android:id="@+id/bt_22"
+                android:layout_width="@dimen/imagebuttondimen"
+                android:layout_height="@dimen/imagebuttondimen"
+                app:layout_constraintStart_toEndOf="@+id/bt_21"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bt_23"
+                android:background="@color/white"/>
+            <ImageButton
+                android:id="@+id/bt_23"
+                android:layout_width="@dimen/imagebuttondimen"
+                android:layout_height="@dimen/imagebuttondimen"
+                app:layout_constraintStart_toEndOf="@id/bt_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/white"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/lines_style">
+            <ImageButton
+                android:id="@+id/bt_31"
+                android:layout_width="@dimen/imagebuttondimen"
+                android:layout_height="@dimen/imagebuttondimen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bt_32"
+                android:background="@color/white"/>
+            <ImageButton
+                android:id="@+id/bt_32"
+                android:layout_width="@dimen/imagebuttondimen"
+                android:layout_height="@dimen/imagebuttondimen"
+                app:layout_constraintStart_toEndOf="@+id/bt_31"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bt_33"
+                android:background="@color/white"/>
+            <ImageButton
+                android:id="@+id/bt_33"
+                android:layout_width="@dimen/imagebuttondimen"
+                android:layout_height="@dimen/imagebuttondimen"
+                app:layout_constraintStart_toEndOf="@id/bt_32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/white"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
