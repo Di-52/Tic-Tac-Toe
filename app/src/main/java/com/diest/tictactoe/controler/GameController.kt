@@ -52,7 +52,7 @@ class GameController {
             return
         }
 
-        result = checkDiagonalLeft()
+        result = checkDiagonalRight()
         if (result != null) {
             setMsg("Выиграл " + if (result == CellState.STATE_X) "крестики" else "нолики")
             return
